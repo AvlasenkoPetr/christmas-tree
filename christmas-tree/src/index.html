@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Forum:regular" rel="stylesheet" />
+  <title>Christmas Task</title>
+</head>
+<body>
+
+  <header class="header">
+    <a class="header__button" href="#main">Главная</a>
+    <a class="header__button" href="#toys">Игрушки</a>
+    <a class="header__button tree-button" href="#tree">Ёлка</a>
+    <div class="header__counter">0</div>
+  </header>
+  
+
+  <main>
+
+    <div class="main-page active">
+      <div class="main-page__description">Новогодняя игра<br>«Наряди ёлку»</div>
+      <a class="main-page__button" href="#toys">Начать игру</a>
+    </div>
+
+
+    <div class="toys-page">
+
+      <div class="filter">
+        <input placeholder="Поиск" type="search" >
+
+        <select>
+          <option disabled selected>Методы сортировки</option>
+          <option>По названию от "А" до "Я"</option>
+          <option>По названию от "Я" до "А"</option>
+          <option>По году производства от старых к новым</option>
+          <option>По году производства от новых к старым</option>
+        </select>
+
+        <div class="filter__block">
+          <h3>Год приобритения:</h3>
+          <span class="slider-min">1940</span>
+          <div id="slider-year"></div>
+          <span class="slider-max">2020</span>
+        </div>
+
+        <div class="filter__block">
+          <h3>Количество:</h3>
+          <span class="slider-min">1</span>
+          <div id="slider-count"></div>
+          <span class="slider-max">12</span>
+        </div>
+
+        
+        <div class="filter__block">
+          <h3>Цвет:</h3>
+          <div id="color">
+            <button class="filter__button-color" data-color="белый"></button>
+            <button class="filter__button-color" data-color="красный"></button>
+            <button class="filter__button-color" data-color="зелёный"></button>
+            <button class="filter__button-color" data-color="синий"></button>
+            <button class="filter__button-color" data-color="желтый"></button>
+          </div>
+        </div>
+
+        <div class="filter__block">
+          <h3>Размер:</h3>
+          <div>
+            <button class="filter__button-size" data-size="большой"></button>
+            <button class="filter__button-size" data-size="средний"></button>
+            <button class="filter__button-size" data-size="малый"></button>
+          </div>
+        </div>
+
+        <div class="filter__block">
+          <h3>Форма:</h3>
+          <div>
+            <button class="filter__button-form" data-shape="шар"></button>
+            <button class="filter__button-form" data-shape="колокольчик"></button>
+            <button class="filter__button-form" data-shape="шишка"></button>
+            <button class="filter__button-form" data-shape="снежинка"></button>
+            <button class="filter__button-form" data-shape="фигурка"></button>
+          </div>
+        </div>
+
+        <div class="filter__block">
+          <h3>Только любимые</h3>
+          <button class="filter__button-fav" data-favorite="null"></button>
+        </div>
+
+        <div class="filter__reset-button">Сбросить фильтры</div>
+      </div>
+
+      <div class="toys"></div>
+    </div>
+
+
+    <div class="tree-page">
+
+      <div class="tree-settings__section">
+
+        <div class="tree-settings__buttons-block">
+          <button class="tree-settings__button audio-button"></button>
+          <button class="tree-settings__button snow-button"></button>
+        </div>
+
+        <div class="tree-settings__block">
+          <h3>Выберите ёлку:</h3>
+          <div class="tree-settings__options-block" id="tree-select">
+            <div class="tree-settings__option tree-option picked"></div>
+            <div class="tree-settings__option tree-option"></div>
+            <div class="tree-settings__option tree-option"></div>
+            <div class="tree-settings__option tree-option"></div>
+            <div class="tree-settings__option tree-option"></div>
+            <div class="tree-settings__option tree-option"></div>
+          </div>
+        </div>
+
+        <div class="tree-settings__block">
+          <h3>Выберите фон:</h3>
+          <div class="tree-settings__options-block" id="bg-select">
+            <div class="tree-settings__option bg-option picked"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+            <div class="tree-settings__option bg-option"></div>
+          </div>
+        </div>
+
+        <div class="tree-settings__block">
+          <h3>Выберите гирлянду:</h3>
+          <div class="tree-settings__options-block" id="garland-select">
+            <div class="garland-option" id="yellow"></div>
+            <div class="garland-option" id="red"></div>
+            <div class="garland-option" id="green"></div>
+            <div class="garland-option" id="blue"></div>
+            <div class="garland-option" id="rainbow"></div>
+            <div class="garland-option" id='garland-off'>off</div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="tree__section">
+        
+        <map name="tree-main">
+          <area id="tree-area" coords="225,1, 0,560, 61,633, 393,634, 448,567" shape="poly" alt="tree-area">
+        </map>
+        <!-- 225,1, 100,219, 0,523, 125,650, 365,650, 450,546, 365,223 -->
+        
+        <img id="tree" usemap="#tree-main" src="https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/1.png" alt="tree" >
+        
+        <div class="snowflakes-container"></div>
+
+        <div class="garland-container"></div>
+      </div>
+
+      <div class="tree-settings__section">
+
+        <div class="tree-settings__block">
+          <h3>Игрушки:</h3>
+          <div class="tree-settings__options-block" id="toy-select"></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div>Developer: <a href="https://github.com/AvlasenkoPetr" target="_blink">Avlasenko Petr</a></div>
+    <div class="rsschool"><a href="https://rs.school/js/" target="_blink"></a></div>
+  </footer>
+
+</body>
+</html>

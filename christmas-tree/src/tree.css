@@ -1,0 +1,382 @@
+.tree-page {
+  margin-top: 10vh;
+  display: none;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tree-page.active {
+  display: flex;
+}
+
+.tree-settings__section {
+  width: 26vw;
+  max-width: 500px;
+  height: 100%;
+  background-color: #192f2dc0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree-settings__buttons-block {
+  width: 23%;
+  margin: 3% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tree-settings__button {
+  width: 35px;
+  height: 35px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  transition: .2s linear;
+}
+
+.tree-settings__button:hover {
+  opacity: .8;
+}
+
+.audio-button {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/audio.svg);
+}
+
+.snow-button {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/snow.svg);
+}
+
+.tree-settings__block {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 3% 0;
+  padding: 3%;
+  min-height: 100px;
+}
+
+.tree-settings__block h3 {
+  font-size: 20px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.tree-settings__options-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tree-settings__option {
+  background-position: center;
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.tree-settings__option:hover{
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.tree-settings__option.picked {
+  transform: scale(0.8);
+  box-shadow: 0 0 16px #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.tree-option {
+  width: 110px;
+  height: 110px;
+}
+
+.tree-settings__option.tree-option:nth-child(1) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/1.png);
+}
+.tree-settings__option.tree-option:nth-child(2) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/2.png);
+}
+.tree-settings__option.tree-option:nth-child(3) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/3.png);
+}
+.tree-settings__option.tree-option:nth-child(4) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/4.png);
+}
+.tree-settings__option.tree-option:nth-child(5) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/5.png);
+}
+.tree-settings__option.tree-option:nth-child(6) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/6.png);
+}
+
+.bg-option {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-size: auto 100%;
+  background-color: rgba(255, 255, 255, 0);
+  background-blend-mode: overlay;
+}
+
+.tree-settings__option.bg-option:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tree-settings__option.bg-option:nth-child(1) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/1.jpg);
+}
+.tree-settings__option.bg-option:nth-child(2) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/2.jpg);
+}
+.tree-settings__option.bg-option:nth-child(3) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/3.jpg);
+}
+.tree-settings__option.bg-option:nth-child(4) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/4.jpg);
+}
+.tree-settings__option.bg-option:nth-child(5) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/5.jpg);
+}
+.tree-settings__option.bg-option:nth-child(6) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/6.jpg);
+}
+.tree-settings__option.bg-option:nth-child(7) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/7.jpg);
+}
+.tree-settings__option.bg-option:nth-child(8) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/8.jpg);
+}
+.tree-settings__option.bg-option:nth-child(9) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/9.jpg);
+}
+.tree-settings__option.bg-option:nth-child(10) {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/10.jpg);
+}
+
+.toy-option {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: unset;
+}
+
+.toy-img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  cursor: grab;
+}
+
+.toy-counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 15px;
+  background-color: #24C5DB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------------------- */
+
+.tree__section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#tree {
+  width: 450px;
+  height: 650px;
+  align-self: flex-end;
+  margin-bottom: 30px;
+}
+
+/* -----------------------GARLAND---------------------------------------------------- */
+
+#garland-select {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.garland-option {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  transition: .2s linear;
+  cursor: pointer;
+}
+
+.garland-option:hover {
+  transform: scale(1.2);
+}
+
+#yellow {
+  background-color: #ffff00;
+  box-shadow: 0 0 8px #ffff00;
+}
+
+#red {
+  background-color: #ff0000;
+  box-shadow: 0 0 8px #ff0000;
+}
+
+#green {
+  background-color: #00ff00;
+  box-shadow: 0 0 8px #00ff00;
+}
+
+#blue {
+  background-color: #0000ff;
+  box-shadow: 0 0 8px #0000ff;
+}
+
+#rainbow {
+  background: linear-gradient(60deg, #ff0000, #ff8800, #ffee00, #07a107, #0404eb);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+#garland-off {
+  width: 20px;
+  height: 20px;
+  background-color: #24C5DB;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+#garland-off:hover {
+  transform: scale(1.2);
+}
+
+/* ------------ SNOWFLAKES ---------------------------------------------------------------------------- */
+
+.snowflake {
+	color: #fff;
+	position: absolute;
+	top: -20px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+	animation: fall linear forwards;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(95vh);
+  }
+}
+
+/* ----------------- GARLAND -------------------------------------------------------------------------------------- */
+
+.garland-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 6vh;
+  width: 450px;
+  height: 600px;
+  pointer-events: none;
+}
+
+.lightrope {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  margin: auto;
+  padding: 0;
+  /* border-radius: 50%; */
+  list-style: none;
+  pointer-events: none;
+  /* overflow: hidden; */
+}
+
+.lightrope li {
+  position: relative;
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: flash-1 alternate infinite;
+  animation-duration: 1s;
+}
+
+.lightrope li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.yellow-lamp {
+  background-color: #ffff00;
+  box-shadow: 0 0 5px #ffff00;
+}
+
+.red-lamp {
+  background-color: #ff0000;
+  box-shadow: 0 0 5px #ff0000;
+}
+
+.green-lamp {
+  background-color: #00ff00;
+  box-shadow: 0 0 5px #00ff00;
+}
+
+.blue-lamp {
+  background-color: #0000ff;
+  box-shadow: 0 0 5px #0000ff;
+}
+
+.purple-lamp {
+  background-color: #ff00ff;
+  box-shadow: 0 0 5px #ff00ff;
+}
+
+.orange-lamp {
+  background-color: #f90;
+  box-shadow: 0 0 5px #f90;
+}
+
+
+@keyframes flash-1 {
+  to {
+    opacity: .5;
+  }
+}
+/* pointer-events: none */

@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Forum';
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100 0;
+  background-attachment: fixed;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ----------------------- HEADER -------------------------------------------------------------------------------------------------------*/
+
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background-color: #192F2D;
+}
+
+.header__button {
+  position: relative;
+  z-index: 1;
+  padding: 5px 10px;
+  margin-right: 50px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  transition: .2s linear;
+}
+
+.header__button:hover {
+  color: #24C5DB;
+  border-color: #24C5DB;
+}
+
+.header__counter {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+
+/* ----------------------- MAIN PAGE -------------------------------------------------------------------------------------------------------*/
+
+
+.main-page {
+  margin-top: 10vh;
+  display: none;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-page.active {
+  display: flex;
+}
+
+.main-page__description {
+  font-size: 48px;
+  min-width: 30%;
+  padding: 90px;
+  background-color: rgba(36, 197, 219, 0.5);
+  border: 2px solid #2299EB;
+  margin-bottom: 5%;
+  border-radius: 20px;
+}
+
+.main-page__button {
+  min-width: 15%;
+  padding: 20px;
+  border: 2px solid #2299EB;
+  background-color: rgba(36, 197, 219, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.main-page__button:hover {
+  box-shadow: 0 0 10px #24C5DB;
+}
+
+
+/* ----------------------- TOYS PAGE -------------------------------------------------------------------------------------------------------*/
+
+
+.toys-page {
+  margin-top: 10vh;
+  display: none;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.toys-page.active {
+  display: flex
+}
+
+
+/* ----------------------- FILTER -------------------------------------------------------------------------------------------------------*/
+
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  padding: 10vh 0 0;
+  background-color: #192f2dc0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter input[type="search"] {
+  appearance: none;
+  width: 74%;
+  border-radius: 5px;
+  border: 1px solid #24C5DB;
+  padding: 3px 5px;
+  background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(36, 197, 219, 0.15) 0%, rgba(36, 197, 219, 0) 100%);
+  margin: 3% 0;
+}
+
+.filter input[type="search"]::placeholder {
+  color: #24C5DB;
+}
+
+.filter input[type="search"]:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: 0 0 4px #fff;
+}
+
+.filter input[type="search"]:focus::placeholder {
+  color: #fff;
+}
+
+.filter select {
+  appearance: none;
+  width: 74%;
+  border-radius: 5px;
+  border: 1px solid #24C5DB;
+  padding: 3px 5px;
+  background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(36, 197, 219, 0.15) 0%, rgba(36, 197, 219, 0) 100%);
+  margin: 3% 0;
+  cursor: pointer;
+}
+
+.filter select:focus {
+  outline: none;
+}
+
+.filter option {
+  background-color: rgba(27, 167, 185, 0.308);
+  color: black;
+}
+
+.filter__block {
+  width: 80%;
+  padding: 3%;
+  position: relative;
+}
+
+.filter__block h3 {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.filter__block > div {
+  display: flex;
+  align-items: center;
+}
+
+.filter__button-color {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  transition: .1s linear;
+}
+
+.filter__button-color.selected {
+  transform: scale(0.8);
+  box-shadow: 0 0 8px 4px #fff;
+}
+
+.filter__button-color[data-color="белый"] {
+  background-color: #fff;
+}
+.filter__button-color[data-color="красный"] {
+  background-color: #FD0000;
+}
+.filter__button-color[data-color="зелёный"] {
+  background-color: #08AA05;
+}
+.filter__button-color[data-color="синий"] {
+  background-color: #2299EB;
+}
+.filter__button-color[data-color="желтый"] {
+  background-color: #FDD700;
+}
+
+.filter__button-color:hover {
+  border-color: #fff; 
+}
+
+.filter__button-size {
+  margin-right: 30px;
+  background-color: transparent;
+  border: none;
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/ball.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .1s linear;
+}
+
+.filter__button-size.selected {
+  transform: scale(.8);
+  filter: invert(47%) sepia(13%) saturate(1518%) hue-rotate(3deg) brightness(95%) contrast(87%);
+}
+
+.filter__button-size[data-size="большой"] {
+  width: 60px;
+  height: 60px;
+}
+.filter__button-size[data-size="средний"] {
+  width: 50px;
+  height: 50px;
+}
+.filter__button-size[data-size="малый"] {
+  width: 40px;
+  height: 40px;
+}
+
+.filter__button-size:hover {
+  opacity: .8;
+}
+
+.filter__button-form {
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: .1s linear;
+}
+
+.filter__button-form.selected {
+  transform: scale(.8);
+  filter: invert(47%) sepia(13%) saturate(1518%) hue-rotate(3deg) brightness(95%) contrast(87%);
+}
+
+.filter__button-form[data-shape="шар"] {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/ball.svg);
+}
+.filter__button-form[data-shape="колокольчик"] {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/bell.svg);
+}
+.filter__button-form[data-shape="шишка"] {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/cone.svg);
+}
+.filter__button-form[data-shape="снежинка"] {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/snow.svg);
+}
+.filter__button-form[data-shape="фигурка"] {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/toy.svg);
+}
+
+.filter__button-form:hover {
+  opacity: .8;
+}
+
+.filter__button-fav {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+}
+
+.filter__button-fav.selected {
+  background-color: #8e743d;
+}
+
+.filter__reset-button {
+  width: 45%;
+  height: 50px;
+  margin-top: 3%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #24C5DB;
+  border: 2px solid #24C5DB;
+  border-radius: 25px;
+  background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(157, 243, 255, 0.2) 100%);;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.filter__reset-button:hover {
+  border-color: #fff;
+  color: #fff;
+  background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(102, 237, 255, 0.336) 100%);;
+}
+
+#slider-year,
+#slider-count {
+  width: 80%;
+  height: 10px;
+  position: relative;
+}
+
+.slider-max,
+.slider-min {
+  position: absolute;
+  font-size: 18px;
+  bottom: -9px;
+  width: 50px;
+  text-align: center;
+}
+
+.slider-min {
+  left: 0;
+}
+.slider-max{
+  right: 70px;
+}
+
+
+/* ----------------------- TOYS CONTAINER -------------------------------------------------------------------------------------------------------*/
+
+
+.toys {
+  width: 70%;
+  margin-left: 30%;
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:flex-start;
+  gap: 50px;
+}
+
+.toys__item {
+  width: 20%;
+  min-width: 170px;
+  min-height: 250px;
+  padding: 20px;
+  background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(255, 255, 255, 0.6) 0%, rgba(179, 246, 255, 0.6) 100%);
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  cursor: pointer;
+}
+
+.toys__item.visible {
+  display: flex;
+  /* animation: a1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; */
+}
+
+.toys__item.visible.favorite{
+  background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 244, 89, 0.603) 100%);
+}
+
+.toys__item h2 {
+  font-size: 20px;
+  line-height: 25px;
+  min-height: 50px;
+}
+
+.toys__item img {
+  width: 60%;
+  margin: 30px 0;
+  align-self: center;
+}
+
+.toys__item p {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+/* ----------------------- FOOTER -------------------------------------------------------------------------------------------------------*/
+
+
+.footer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-color: #192F2D;
+  transition: .2s linear;
+}
+
+.footer a:hover {
+  opacity: .8;
+}
+
+.rsschool {
+  width: 150px;
+  height: 8vh;
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/svg/rss.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: .2s linear;
+  cursor: pointer;
+}
+
+.rsschool:hover {
+  opacity: .8;
+}
+
+/* --------------- ДОП ЭЛЕМЕНТЫ ------------------------------------------------------------------------------------------------------------ */
+
+.error__message {
+  position: absolute;
+  color: red;
+  font-size: 18px;
+  right: 180px;
+}
